@@ -1,29 +1,20 @@
 <html>
 <head>
 <title>login Form</title>
-<link rel="stylesheet" href="mystyle.css">
+<link rel="stylesheet" href="css/mystyle.css">
 </head>
 <body>
     <?php include "header.php"; ?>
 <form name="form1" method="post" action="check_login.php">
-Login<br>
-<table border="1" style="width: 300px">
-<tbody>
-<tr>
-<td> &nbsp;Username</td>
-<td>
+
+<label>Username</label>
 <input name="txtUsername" type="text" id="txtUsername">
-</td>
-</tr>
-<tr>
-<td> &nbsp;Password</td>
-<td><input name="txtPassword" type="password" id="txtPassword">
-</td>
-</tr>
-</tbody>
-</table>
-<br>
-<input type="submit" name="Submit" value="Login">
+<label>Password</label>
+
+<input name="txtPassword" type="password" id="txtPassword">
+
+<hr>
+<button type="submit" class="registerbtn" >เข้าสู่ระบบ</button>
 </form>
 </body>
 </html>
