@@ -10,7 +10,6 @@ CREATE TABLE `member` (
 
 -- 
 -- Dumping data for table `member`
--- 
 
 INSERT INTO `member` VALUES (001, 'wut', 'wut1234', 'Wutthichai Sukkasem', 'USER');
 INSERT INTO `member` VALUES (002, 'phanupon', 'phanupon1234', 'Phanupon Phasuchaisakul', 'ADMIN');
