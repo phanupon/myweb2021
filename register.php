@@ -5,8 +5,7 @@
 
 </head>
 <body>
-    
-
+ //get register   
 <?php
 
 if(empty($_GET["register"])){
