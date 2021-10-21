@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>login Form</title>
+<link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
     <?php include "header.php"; ?>
