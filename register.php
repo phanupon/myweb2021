@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/mystyle.css">
 </head>
 <body>
-    
-
 <?php
 include "header.php";
 if(empty($_GET["register"])){
@@ -14,11 +13,10 @@ if(empty($_GET["register"])){
 <br><br><br>
 <form method="GET" action="<?php echo ($_SERVER["PHP_SELF"]); ?>">
   <div class="container">
-    <h1>Register</h1>
-    <p>Please fill in this form to create an account.</p>
+    <h1>สมัครสมาชิก</h1>
+    <p>กรุณากรอกข้อมูลให้ครบ.</p>
     <hr>
-
-    <label for="username"><b>Username</b></label>
+    <label for="username"><b>UserName</b></label>
     <input type="text" placeholder="Enter Username" name="username" id="username" required>
 
     <label for="psw"><b>Password</b></label>
@@ -30,13 +28,13 @@ if(empty($_GET["register"])){
     <label for="name"><b>email</b></label>
     <input type="text" placeholder="Enter email address" name="email" id="email" required>
     <hr>
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    <!-- <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
 
     <button type="submit" class="registerbtn">Register</button>
   </div>
   
   <div class="container signin">
-    <p>Already have an account? <a href="login.php">Sign in</a>.</p>
+    <p>เคยเป็นสมาชิกแล้ว <a href="login.php">Sign in</a>.</p>
   </div>
 </form>
 <?php
