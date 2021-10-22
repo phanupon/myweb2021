@@ -4,7 +4,7 @@ $name = $_GET["name"];
 $job = $_GET["job"];
 $salary = $_GET["salary"];
 $departmentID = $_GET["departmentID"];
-
+include "header.php";
 //$link = mysqli_connect('localhost','root','','employee');
 include "dbconn.php";
 
@@ -23,5 +23,5 @@ if($result){
     echo "can not insert data to employee";
    // header("location:select1.php");  
 }
-
+include "footer.php";
 ?>

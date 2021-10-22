@@ -43,7 +43,7 @@ while ($dbarr = mysqli_fetch_array($result))
     echo "<td>$dbarr[0]</td>";
     echo "<td>$dbarr[1]</td>";
     echo "<td>$dbarr[3]</td>";
-    echo "<td>$dbarr[2]</td>";
+    echo "<td>".number_format($dbarr[2],2)."</td>";
     echo "<td>$dbarr[4]</td>";
     echo "<td><a href=delete.php?id=$dbarr[employeeID]>Delete</a> <a href=updateload2.php?id=$dbarr[employeeID]>Edit</a></td>";
     echo "</tr>";

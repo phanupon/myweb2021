@@ -1,9 +1,32 @@
 <?php
+include 'header.php';
+session_start();
+  
+if($_SESSION['UserID'] == "")
+{
+echo "Please Login!";
+header('Location: login.php');
+    exit();
+}
+
+if($_SESSION['Status'] != "ADMIN")
+{
+    echo "This page for Admin only!";
+    exit();
+}	
+//$link = mysqli_connect('localhost','root','','employee');
+include 'dbconn.php';
+//$sql1 = "use myweb";
+//$result = mysqli_query($link,$sql1);
+
+//$sql = 'SELECT * FROM employee';
+?>
+<?php
 if(empty($_GET["search_by"])) {
 ?>
 <h2>Program search Employee data</h2>
 <?php 
-include 'header.php';
+//include 'header.php';
 ?>
 <table border=1>
  <tr>
@@ -28,7 +51,7 @@ include 'header.php';
 }else{
     
 echo "<h2>Program search Employee Data</h2>";    
-include 'header.php';
+//include 'header.php';
 echo "<table border=1>";
 echo "<tr><td>";
 echo "<form method=get action=search.php>";
@@ -80,7 +103,7 @@ while ($dbarr=mysqli_fetch_array($result2))
     echo "<td>$dbarr[employeeID]</td>";
     echo "<td>$dbarr[name]</td>";
     echo "<td>$dbarr[job]</td>";
-    echo "<td>$dbarr[salary]</td>";
+    echo "<td>".number_format($dbarr['salary'],2)."</td>";
     echo "<td>$dbarr[departmentID]</td>";
     echo "<td><a href=delete.php?id=$dbarr[employeeID]>Delete</a> <a href=updateload2.php?id=$dbarr[employeeID]>Edit</a></td>";
     echo "</tr>";

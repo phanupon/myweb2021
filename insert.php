@@ -37,7 +37,7 @@ $resultID = mysqli_fetch_array($result);
 $sql2 = "select * from job";
 $result2 = mysqli_query($link,$sql2);
 while($dbarr2 = mysqli_fetch_array($result2)){
-	echo "<option value=$dbarr2[job_id]>$dbarr2[job_name]</option>";
+echo "<option value=$dbarr2[job_id]>$dbarr2[job_name]</option>";
 }
 ?> </select></p>
 <p>salary<input type="text" name="salary"></p>
@@ -46,7 +46,7 @@ include "dbconnect.php";
 $sql3 = "select * from department";
 $result3 = mysqli_query($link,$sql3);
 while($dbarr3 = mysqli_fetch_array($result3)){
-	echo "<option value=$dbarr3[departmentID]>$dbarr3[department]</option>";
+echo "<option value=$dbarr3[departmentID]>$dbarr3[department]</option>";
 }
 ?> </select></p>
 <input type="submit" name="send" value="Submit">
