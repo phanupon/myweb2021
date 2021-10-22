@@ -6,8 +6,7 @@
 		exit();
 	}
 	
-//	mysql_connect("localhost","root","root");
-//	mysql_select_db("mydatabase");
+
 include 'dbconn.php';
     $strSQL = "SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ";
 	$objQuery = mysqli_query($link,$strSQL);
@@ -15,7 +14,7 @@ include 'dbconn.php';
 ?>
 <html>
 <head>
-<title>ThaiCreate.Com Tutorials</title>
+<title>Employee Admin</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
 <body>
 <form name="form1" method="post" action="save_profile.php">

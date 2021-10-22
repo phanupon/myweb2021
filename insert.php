@@ -16,20 +16,39 @@ session_start();
 		exit();
 	}
 
-	if($_SESSION['Status'] != "USER")
+	if($_SESSION['Status'] != "ADMIN")
 	{
 		echo "This page for User only!";
 		exit();
 	}	
 ?>
-<p>เพิ่มข้อมูลพนักงานใหม่</p>
+<?php
+include "dbconn.php";
+$sql = "select employeeID FROM employee ORDER by employeeID DESC Limit 0,1";
+$result = mysqli_query($link,$sql);
+$resultID = mysqli_fetch_array($result);
+?>
+<p><h3>เพิ่มข้อมูลพนักงานใหม่</h3></p>
 <form method="GET" action="input.php">
-<p>Form input data to employee table</p>
-<p>employeeID <input type="text" name="id"></p>
+<p>employeeID <input type="text" name="id" value="<?php echo $resultID[0]+1; ?>"></p>
 <p>name<input type="text" name="name"></p>
-<p>job<input type="text" name="job"></p>
+<p>job<select id= job name="job"><?php 
+//include "dbconnect.php";
+$sql2 = "select * from job";
+$result2 = mysqli_query($link,$sql2);
+while($dbarr2 = mysqli_fetch_array($result2)){
+	echo "<option value=$dbarr2[job_id]>$dbarr2[job_name]</option>";
+}
+?> </select></p>
 <p>salary<input type="text" name="salary"></p>
-<p>Department ID<input type="text" name="departmentid"></p>
+<p>Department<select id="departmentID" name="departmentID"><?php 
+include "dbconnect.php";
+$sql3 = "select * from department";
+$result3 = mysqli_query($link,$sql3);
+while($dbarr3 = mysqli_fetch_array($result3)){
+	echo "<option value=$dbarr3[departmentID]>$dbarr3[department]</option>";
+}
+?> </select></p>
 <input type="submit" name="send" value="Submit">
 <input type="reset" name="cancle" value="Reset">
 

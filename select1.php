@@ -19,7 +19,11 @@ include 'dbconn.php';
 //$sql1 = "use myweb";
 //$result = mysqli_query($link,$sql1);
 
-$sql = 'SELECT * FROM employee';
+//$sql = 'SELECT * FROM employee';
+$sql = "select employee.employeeID, employee.name, 
+employee.salary, job.job_name, department.department 
+FROM employee LEFT JOIN department ON employee.departmentID = department.departmentID 
+LEFT JOIN job ON employee.job = job.job_id ORDER BY employee.employeeID DESC";
 $result = mysqli_query($link,$sql);
 //echo table
 echo "<h2>Show data From Employee</h2>";
@@ -36,11 +40,11 @@ echo "</tr>";
 while ($dbarr = mysqli_fetch_array($result))
 {
     echo "<tr>";
-    echo "<td>$dbarr[employeeID]</td>";
-    echo "<td>$dbarr[name]</td>";
-    echo "<td>$dbarr[job]</td>";
-    echo "<td>$dbarr[salary]</td>";
-    echo "<td>$dbarr[departmentID]</td>";
+    echo "<td>$dbarr[0]</td>";
+    echo "<td>$dbarr[1]</td>";
+    echo "<td>$dbarr[3]</td>";
+    echo "<td>$dbarr[2]</td>";
+    echo "<td>$dbarr[4]</td>";
     echo "<td><a href=delete.php?id=$dbarr[employeeID]>Delete</a> <a href=updateload2.php?id=$dbarr[employeeID]>Edit</a></td>";
     echo "</tr>";
 }
