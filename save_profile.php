@@ -6,8 +6,7 @@ include "header.php";
 		echo "Please Login!";
 		exit();
 	}
-//	mysql_connect("localhost","root","root");
-//	mysql_select_db("mydatabase");
+	//connec data base
     include 'dbconn.php';
 	if($_POST["txtPassword"] != $_POST["txtConPassword"])
 	{
