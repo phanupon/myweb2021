@@ -9,4 +9,5 @@ if ($link->connect_errno){
     die("connection failed: ".$link->connect_error);
 }
 echo "Connected Successfully";
+$link->set_charset("utf8");	
 ?>

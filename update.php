@@ -14,7 +14,7 @@ $result = mysqli_query($link, $query);
 if($result){
     include 'header.php';
     echo "Edit data sucess full <a href='select1.php'>Show data</a>";
-   // header('Location: select1.php');
+    header('Location: select1.php');
 }else {
     echo "Can not Edit data in Data base";
     

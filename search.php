@@ -9,7 +9,7 @@ header('Location: login.php');
     exit();
 }
 
-if($_SESSION['Status'] != "ADMIN")
+if($_SESSION['Status'] != "USER")
 {
     echo "This page for Admin only!";
     exit();

@@ -19,6 +19,7 @@
     }
     $username = mysqli_real_escape_string($link,$txtUsernamr);
     $password = mysqli_real_escape_string($link,$txtPassword);
+    $password = md5($txtPassword);
     $sql = "SELECT * FROM member WHERE Username = '$username' and Password = '$password';";
 	//$sql = "SELECT * FROM member WHERE Username='$username' and Password='$password';";
     $result = mysqli_query($link,$sql);
