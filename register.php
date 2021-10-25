@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="phanupon" content="empolyee, job">
-<link rel="stylesheet" href="css/mystyle.css">
+<link rel="stylesheet" href="css/mystyle1.css">
 </head>
 <body>
 <?php
@@ -15,24 +15,24 @@ include "header.php";
 
 //if(empty($_GET["register"])){
 ?>    
-<br><br><br>
+
 <!-- <form method="GET" action="<?php //echo ($_SERVER["PHP_SELF"]); ?>"> -->
 <form method="GET" action="addmember.php"> 
   <div class="container">
     <h1>สมัครสมาชิก</h1>
     <p>กรุณากรอกข้อมูลให้ครบ.</p>
     <hr>
-    <label for="username"><b>UserName</b></label>
-    <input type="text" placeholder="Enter Loginname" name="loginname" id="loginname" required>
+    <label for="username"><b>UserName</b></label><br>
+    <input type="text" placeholder="Enter Loginname" name="loginname" id="loginname" required><br>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <label for="psw"><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br>
 
-    <label for="name"><b>name</b></label>
-    <input type="text" placeholder="Enter name and Lastname" name="name" id="name" required>
+    <label for="name"><b>name</b></label><br>
+    <input type="text" placeholder="Enter name and Lastname" name="name" id="name" required><br>
 
-    <label for="name"><b>email</b></label>
-    <input type="text" placeholder="Enter email address" name="email" id="email" required>
+    <label for="name"><b>email</b></label><br>
+    <input type="text" placeholder="Enter email address" name="email" id="email" required><br>
     <hr>
     <!-- <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
 

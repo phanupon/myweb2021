@@ -7,8 +7,9 @@ $result = mysqli_query($link, $sql);
 
 if ($result) {
     echo "Delete data sucess <a href=select1.php>Show Data</a>";
+    header('Location: select1.php');	
 }else {
-    echo "can't delete data <a href=select1.php>Show data</a>";
+    echo "can not delete data <a href=select1.php>Show data</a>";
 }
 
 ?>

@@ -1,3 +1,20 @@
+<?php 
+
+//include 'header.php';
+session_start();
+	if($_SESSION['UserID'] == "")
+	{
+		echo "Please Login!";
+		header('Location: login.php');
+		exit();
+	}
+
+	if($_SESSION['Status'] != "ADMIN")
+	{
+		echo "This page for Admin only!";
+		exit();
+	}	
+?>
 <?php
 include "header.php";
 $id=$_GET['id'];
