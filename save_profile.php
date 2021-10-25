@@ -13,7 +13,7 @@ include "header.php";
 		echo "Password not Match!";
 		exit();
 	}
-	$strSQL = "UPDATE member SET Password = '".trim($_POST['txtPassword'])."' 
+	$strSQL = "UPDATE member SET Password = '".md5(trim($_POST['txtPassword']))."' 
 	,Name = '".trim($_POST['txtName'])."' WHERE UserID = '".$_SESSION["UserID"]."' ";
 	$objQuery = mysqli_query($link,$strSQL);
 	

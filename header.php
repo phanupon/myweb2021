@@ -9,6 +9,7 @@ echo  "
    [<a href=login.php>เข้าสู่ระบบ</a>]:
     [<a href=register.php>สมัครสมาชิก</a>]:
     [<a href=logout.php>ออกจากระบบ</a>]:
+    [<a href=admin_page.php>adminpage</a>]
     <hr>";
 //include "admin_page.php";
 ?>

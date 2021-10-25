@@ -22,7 +22,7 @@ include 'dbconn.php';
 ?>
 <html>
 <head>
-<title>ThaiCreate.Com Tutorials</title>
+<title>user_page</title>
 </head>
 <body>
   Welcome to User Page! <br>

@@ -25,7 +25,7 @@
 ?>
 <html>
 <head>
-<title>ThaiCreate.Com Tutorials</title>
+<title>admin_page</title>
 </head>
 <body>
   Welcome to Admin Page! <br>
